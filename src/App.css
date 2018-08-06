@@ -36,3 +36,6 @@
 .todo-item input[type="checkbox"]  {
   margin: 0px 15px;
 }
+.todo-item div {
+  display: inline-block;
+}
