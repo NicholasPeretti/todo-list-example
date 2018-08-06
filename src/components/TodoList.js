@@ -6,6 +6,7 @@ class TodoList extends React.Component {
     var { todos } = this.props;
     return (
         <ul
+          className='todo-list'
           style={{
             listStyle: 'none'
           }}

@@ -1,3 +1,38 @@
 .App {
   padding:15px;
+  text-align: center;
+  font-size: 20px;
+  margin: 50px auto;
+  width: 500px;
+  background-color: #FAFAFA;
+  box-shadow: #666 0px 5px 15px;
+  border-radius: 3px;
+  border: 1px solid white;
+}
+.todo-input{
+  border-radius: 3px;
+  border: 1px solid grey;
+  font-size: 20px;
+  padding: 15px;
+  width:470px;
+  margin-top:15px;
+}
+.todo-list {
+  text-align: left;
+  padding: 0px;
+}
+.todo-item {
+  cursor: pointer;
+  border: 0px solid #CCC;
+  border-bottom: 1px solid #CCC;;
+  margin: 0px;
+  padding: 30px 0px 15px 0px;
+  transition: 0.3s;
+}
+.todo-item:hover {
+  transition: 0.3s;
+  background: #EFEBE9;
+}
+.todo-item input[type="checkbox"]  {
+  margin: 0px 15px;
 }

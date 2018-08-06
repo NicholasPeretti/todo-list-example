@@ -4,7 +4,7 @@
   <br/>
   <br/>
   <br/>
-  <img src='todo.png' width="200px">
+  <img src='public/todo.png' width="200px">
 </p>
 
 # React Todo List

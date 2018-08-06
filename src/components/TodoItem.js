@@ -1,16 +1,15 @@
 import React from 'react';
 export default ({ todo, onComplete, index }) => {
   const { text, checked } = todo;
-  const onChange = () => {
+  const toggle = () => {
     onComplete(index);
   }
   return (
     <li
-      style={{
-        margin: '15px 0px'
-      }}
+      className="todo-item"
+      onClick={toggle}
     >
-      <input type="checkbox" {...checked} onChange={onChange}/>
+      <input type="checkbox" checked={checked} />
       {checked ?
         <span
           style={{

@@ -34,7 +34,7 @@ class App extends Component {
     var todos = this.state.todos;
     return (
       <div className="App">
-        <h1>Todo List</h1>
+        <img src="todo.png" width="100"/>
         <TodoInput onEnter={this.addTodo.bind(this)} />
         <TodoList todos={todos} onComplete={this.onComplete.bind(this)}/>
       </div>

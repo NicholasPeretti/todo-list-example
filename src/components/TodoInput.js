@@ -16,10 +16,10 @@ class TodoInput extends React.Component {
 
   handleOnKeyUp(e) {
     if (e.keyCode !== 13) return;
-    this.handleOnClick();
+    this.addTodo();
   }
 
-  handleOnClick() {
+  addTodo() {
     let {text} = this.state;
     text = text.trim();
     if (text) {
@@ -34,14 +34,13 @@ class TodoInput extends React.Component {
     return (
       <div>
         <input
-          type="text"
+          type='text'
+          placeholder='What needs to be done?'
+          className='todo-input'
           value={this.state.text}
           onChange={this.handleOnChange.bind(this)}
           onKeyUp={this.handleOnKeyUp.bind(this)}
         />
-        <button
-          onClick={this.handleOnClick.bind(this)}
-        >Add</button>
       </div>
     )
   }
