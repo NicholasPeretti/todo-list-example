@@ -1,18 +1,42 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import TodoInput from './components/TodoInput';
+import TodoList from './components/TodoList';
 import './App.css';
 
+
+
 class App extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      todos: []
+    };
+  }
+
+  addTodo(text) {
+    this.state.todos.push({
+      text,
+      checked: false
+    });
+    this.setState(
+      this.state
+    )
+  }
+
+  onComplete(index) {
+    var todo = this.state.todos[index];
+    todo.checked = !todo.checked;
+    this.setState(this.state);
+  }
+
   render() {
+    var todos = this.state.todos;
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <h1>Todo List</h1>
+        <TodoInput onEnter={this.addTodo.bind(this)} />
+        <TodoList todos={todos} onComplete={this.onComplete.bind(this)}/>
       </div>
     );
   }
