@@ -7,7 +7,7 @@
   <img src='public/todo.png' width="200px">
 </p>
 
-# React Todo List
+# React Todo List <small>([Demo](https://nicholas-peretti-todo-list.herokuapp.com/))</small>
 This is a simple implementation of a todo list in ReactJS. It's meant to be just a sample to learn how ReactJS works.
 
 ## Installation
