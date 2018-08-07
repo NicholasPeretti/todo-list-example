@@ -1,6 +1,6 @@
 import React from 'react';
-export default ({ todo, onComplete, index }) => {
-  const { text, checked } = todo;
+export default ({ todo, onComplete }) => {
+  const { text, checked, index } = todo;
   const toggle = () => {
     onComplete(index);
   }

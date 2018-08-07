@@ -14,7 +14,6 @@ class TodoList extends React.Component {
           {todos.map((todo, i) => (
             <TodoItem
               key={i}
-              index={i}
               todo={todo}
               onComplete={this.props.onComplete}
             />

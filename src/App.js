@@ -38,7 +38,8 @@ class App extends Component {
 
   getVisibleTodos() {
     const {query, todos} = this.state;
-    return query ? filter(todos, query) : todos;
+    var indexedTodos = todos.map((todo, index) => ({...todo, index}));
+    return query ? filter(indexedTodos, query) : indexedTodos;
   }
 
   render() {
