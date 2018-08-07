@@ -39,3 +39,15 @@
 .todo-item div {
   display: inline-block;
 }
+.footer {
+  font-size: 14px;
+  text-align: center;
+}
+.footer button {
+  margin: 5px 15px;
+  background: #FAFAFA;
+  border-radius: 3px;
+  border: 1px solid #CCC;
+  outline: none;
+  cursor: pointer;
+}

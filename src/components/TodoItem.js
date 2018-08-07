@@ -10,7 +10,7 @@ export default ({ todo, onComplete, index }) => {
       onClick={toggle}
     >
       <div style={{width: '50px', verticalAlign: 'top'}}>
-        <input type="checkbox" checked={checked}/>
+        <input type="checkbox" checked={checked} readOnly={true}/>
       </div>
       <div style={{width: '450px'}}>
       {checked ?
