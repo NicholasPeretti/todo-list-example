@@ -16,6 +16,7 @@ class TodoList extends React.Component {
               key={i}
               todo={todo}
               onComplete={this.props.onComplete}
+              onDelete={this.props.onDelete}
             />
           ))}
         </ul>

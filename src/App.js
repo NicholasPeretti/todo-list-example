@@ -4,7 +4,7 @@ import TodoList from './components/TodoList';
 import Footer from './components/Footer';
 import filter from 'lodash/filter';
 import './App.css';
-
+import 'font-awesome/css/font-awesome.min.css'
 
 
 class App extends Component {
@@ -32,6 +32,11 @@ class App extends Component {
     this.setState(this.state);
   }
 
+  onDelete(index) {
+    this.state.todos.splice(index, 1);
+    this.setState(this.state);
+  }
+
   setFilter(query) {
     this.setState({query});
   }
@@ -48,7 +53,11 @@ class App extends Component {
       <div className="App">
         <img src="todo.png" width="100"/>
         <TodoInput onEnter={this.addTodo.bind(this)} />
-        <TodoList todos={todos} onComplete={this.onComplete.bind(this)}/>
+        <TodoList
+          todos={todos}
+          onComplete={this.onComplete.bind(this)}
+          onDelete={this.onDelete.bind(this)}
+        />
         <Footer todos={this.state.todos} setFilter={this.setFilter.bind(this)}/>
       </div>
     );
